@@ -1,0 +1,207 @@
+html {
+  scroll-behavior: smooth;
+  width: 100vw;
+}
+/* navbar */
+a.anchor {
+    display: block;
+    position: relative;
+    top: -50px;
+    visibility: hidden;
+}
+
+.line1, .line2, .line3 {
+  width: 23px;
+  height: 3px;
+  margin: 5px;
+  transition: all .4s;
+}
+
+.change .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.change .line2 {
+  opacity: 0;
+}
+
+.change .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+/* end of navbar */
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+a.active{
+  color:#0275d8 !important;
+  font-weight: bold;
+}
+#WelcomeScreen{
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)),url(himg.jpg) no-repeat center center /cover;
+}
+#About{
+    width: 100vw;
+}
+#Collaborations{
+  width: 100vw;
+}
+.banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+.banner-heading {
+  animation-name: anim;
+  animation-duration: 2s;
+  z-index:3;
+}
+
+.banner-img {
+  animation-name: animO;
+  animation-duration: 2s;
+  animation-delay: .5s;
+  animation-fill-mode: backwards;
+}
+@keyframes anim {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes animO {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* About */
+@media only screen and (min-width: 576px)  {
+.card-1{
+  height: 80vh;
+  }
+  .card-2{
+    height: 80vh;
+    }
+    .card-3{
+      height: 80vh;
+      }
+}
+.card-1{
+  background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .3)), url(purpose.jpg) center center no-repeat /cover;
+}
+.card-2{
+  background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .3)), url(plans.jpg) center center no-repeat /cover;
+}
+.card-3{
+  background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .3)), url(vision.jpg) center center no-repeat /cover;
+}
+
+/*programs*/
+.book-card {
+    position: relative;
+    box-shadow: 5px 15px 50px #aaa;
+    max-width: 420px;
+    overflow: hidden;
+    transition: all .8s;
+}
+
+.rotate {
+    perspective: 100rem;
+}
+
+.back {
+    position: absolute;
+    top: -100%;
+    background: #fefefe;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+    transform: rotateY(180deg);
+    transition: top .8s, opacity .4s;
+}
+
+.back-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rotate:hover .book-card {
+    transform: rotateY(180deg);
+}
+
+.rotate:hover .back {
+    opacity: 1;
+    top: 0;
+    user-select: auto;
+    pointer-events: auto;
+}
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes fromDown {
+  0% {
+    transform: translatey(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translatey(0);
+    opacity: 1;
+  }
+}
+
+/* end of programs */
+.modal-body{
+  background: linear-gradient(105deg,
+   rgba(21, 31, 32, 1) 0%,
+   rgba(21, 31, 32, .95) 50%,
+   transparent 50%),
+   url(startups.jpg) center center no-repeat /cover;
+}
+.round{
+  border-radius: 50%;
+}
+/* collaborations */
+.logo {
+   transition: all .2s ease-in-out;
+  }
+.logo:hover {
+  transform: scale(1.2);
+  animation-duration: 4s;
+}
+.logo-txt {
+   transition: all .2s ease-in-out;
+  }
+.logo-txt:hover {
+  transform: scale(1.1);
+  animation-duration: 4s;
+}
+/* endo of collaborations */
